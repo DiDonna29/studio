@@ -52,7 +52,7 @@ export default function Proposal({ name, onAccept }: ProposalProps) {
         animate={{ y: 0, opacity: 1 }}
         transition={{ delay: 1, duration: 0.5 }}
       >
-        {t.proposalQuestionPlain} 🫶🏼
+        {t.proposalQuestionPlain} 🤔
       </motion.h1>
 
       <p className="mt-4 text-lg text-foreground/80">{t.proposalSubtitle}</p>

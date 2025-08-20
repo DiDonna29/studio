@@ -52,7 +52,7 @@ export const translations = {
       "I'll ask again...",
       "Okay, fine...",
     ],
-    celebrationTitle: "I knew you would say yes 🩶",
+    celebrationTitle: "I knew you would say yes 🫶🏼",
     celebrationSubtitle: "Now we're official.\nI like you so much, you enchant me.",
   },
   es: {
@@ -107,7 +107,7 @@ export const translations = {
       "Preguntaré de nuevo...",
       "Bueno, está bien...",
     ],
-    celebrationTitle: "Sabía que dirías que sí 🩶",
+    celebrationTitle: "Sabía que dirías que sí 🫶🏼",
     celebrationSubtitle: "Ahora somos novios.\nMe gustas, me encantas.",
   },
 };
