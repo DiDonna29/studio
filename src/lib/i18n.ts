@@ -54,6 +54,7 @@ export const translations = {
     ],
     celebrationTitle: "I knew you would say yes 🫶🏼",
     celebrationSubtitle: "Now we're official.\nI like you so much, you enchant me.",
+    songButton: "Listen to it, Although I've never told you...",
   },
   es: {
     gameTitle: "Un Pequeño Juego...",
@@ -109,5 +110,6 @@ export const translations = {
     ],
     celebrationTitle: "Sabía que dirías que sí 🫶🏼",
     celebrationSubtitle: "Ahora somos novios.\nMe gustas, me encantas.",
+    songButton: "Escúchala, Aunque nunca te lo he dicho...",
   },
 };

@@ -55,7 +55,7 @@ export default function Celebration() {
               <CarouselItem key={index}>
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex aspect-auto items-center justify-center p-0 overflow-hidden rounded-lg">
+                    <CardContent className="flex aspect-square items-center justify-center p-0 overflow-hidden rounded-lg">
                        <Image
                         src={photo.src}
                         alt={photo.alt}
@@ -76,11 +76,11 @@ export default function Celebration() {
         </Carousel>
       </div>
       
-      <div className="mt-8">
-        <Button asChild>
+      <div className="mt-8 px-4 w-full max-w-md mx-auto">
+        <Button asChild className="w-full h-auto py-3 whitespace-normal text-center">
           <Link href="https://www.youtube.com/watch?v=GBbaZ0IpQp0&ab_channel=RawayanaOfficial" target="_blank" rel="noopener noreferrer">
-            <Music className="mr-2 h-4 w-4" />
-            Escúchala, Aunque nunca te lo he dicho...
+            <Music className="mr-2 h-4 w-4 shrink-0" />
+            <span>{t.songButton}</span>
           </Link>
         </Button>
       </div>
