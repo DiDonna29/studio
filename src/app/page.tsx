@@ -1,18 +1,18 @@
 "use client";
 
 import { useState } from 'react';
-import MemoryGame from '@/components/memory-game';
+import Quiz from '@/components/quiz';
 import Proposal from '@/components/proposal';
 import Celebration from '@/components/celebration';
 import Header from '@/components/header';
 import { Card, CardContent } from '@/components/ui/card';
 
-type Stage = 'game' | 'proposal' | 'accepted';
+type Stage = 'quiz' | 'proposal' | 'accepted';
 
 export default function Home() {
-  const [stage, setStage] = useState<Stage>('game');
+  const [stage, setStage] = useState<Stage>('quiz');
 
-  const handleGameWin = () => {
+  const handleQuizWin = () => {
     setStage('proposal');
   };
 
@@ -22,8 +22,8 @@ export default function Home() {
 
   const renderStage = () => {
     switch (stage) {
-      case 'game':
-        return <MemoryGame onGameWin={handleGameWin} />;
+      case 'quiz':
+        return <Quiz onQuizWin={handleQuizWin} />;
       case 'proposal':
         return <Proposal onAccept={handleProposalAccept} name="Maria" />;
       case 'accepted':
