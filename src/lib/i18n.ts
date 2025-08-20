@@ -38,9 +38,9 @@ export const translations = {
         },
       ],
     },
-    proposalQuestion: (name: string) => `My Dearest ${name}, will you be my girlfriend?`,
+    proposalQuestion: (name: string) => `${name}, will you be my girlfriend?`,
     proposalSubtitle: "This is the easiest question you'll ever have to answer.",
-    yesButton: "YES! ❤️",
+    yesButton: "YES! 🩶",
     noButtonTexts: [
       "No",
       "Are you sure?",
@@ -51,7 +51,7 @@ export const translations = {
       "I'll ask again...",
       "Okay, fine...",
     ],
-    celebrationTitle: "She said YES!",
+    celebrationTitle: "I knew you would say yes, I love you",
     celebrationSubtitle: "Now we're official. I like you so much, you enchant me.",
   },
   es: {
@@ -92,9 +92,9 @@ export const translations = {
         },
       ],
     },
-    proposalQuestion: (name: string) => `Mi Querida ${name}, ¿quieres ser mi novia?`,
+    proposalQuestion: (name: string) => `${name}, ¿quieres ser mi novia?`,
     proposalSubtitle: "Esta es la pregunta más fácil que tendrás que responder.",
-    yesButton: "¡SÍ! ❤️",
+    yesButton: "¡SÍ! 🩶",
     noButtonTexts: [
       "No",
       "¿Estás segura?",
@@ -105,7 +105,7 @@ export const translations = {
       "Preguntaré de nuevo...",
       "Bueno, está bien...",
     ],
-    celebrationTitle: "¡Dijo que SÍ!",
+    celebrationTitle: "Sabía que dirías que sí, te quiero",
     celebrationSubtitle: "Ahora somos novios. Me gustas, me encantas. Un nuevo capítulo comienza.",
   },
 };
