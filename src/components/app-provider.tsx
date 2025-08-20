@@ -9,7 +9,11 @@ const appReducer = (state: any, action: any) => {
     case 'TOGGLE_THEME':
       return { ...state, theme: state.theme === 'light' ? 'dark' : 'light' };
     case 'TOGGLE_LANGUAGE':
-      return { ...state, language: state.language === 'en' ? 'es' : 'en' };
+      return { ...state, language: state.language === 'es' ? 'en' : 'es' };
+    case 'SET_THEME':
+      return { ...state, theme: action.payload };
+    case 'SET_LANGUAGE':
+      return { ...state, language: action.payload };
     default:
       return state;
   }
@@ -27,6 +31,9 @@ export const AppProvider: FC<{ children: ReactNode }> = ({ children }) => {
       }
       if (storedLang) {
         dispatch({ type: 'SET_LANGUAGE', payload: storedLang });
+      } else {
+        // Set default language if none is stored
+        dispatch({ type: 'SET_LANGUAGE', payload: 'es' });
       }
     }
   }, []);

@@ -11,7 +11,7 @@ type AppContextType = {
 
 export const defaultState: AppContextType = {
   theme: 'light',
-  language: 'en',
+  language: 'es',
   toggleTheme: () => {},
   toggleLanguage: () => {},
 };

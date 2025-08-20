@@ -37,7 +37,7 @@ export const translations = {
         },
       ],
     },
-    proposalQuestion: (name: string) => `My Dearest ${name}, will you marry me?`,
+    proposalQuestion: (name: string) => `My Dearest ${name}, will you be my girlfriend?`,
     proposalSubtitle: "This is the easiest question you'll ever have to answer.",
     yesButton: "YES! ❤️",
     noButtonTexts: [
@@ -91,7 +91,7 @@ export const translations = {
         },
       ],
     },
-    proposalQuestion: (name: string) => `Mi Querida ${name}, ¿quieres casarte conmigo?`,
+    proposalQuestion: (name: string) => `Mi Querida ${name}, ¿quieres ser mi novia?`,
     proposalSubtitle: "Esta es la pregunta más fácil que tendrás que responder.",
     yesButton: "¡SÍ! ❤️",
     noButtonTexts: [

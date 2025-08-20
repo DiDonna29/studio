@@ -25,7 +25,7 @@ export default function Home() {
       case 'quiz':
         return <Quiz onQuizWin={handleQuizWin} />;
       case 'proposal':
-        return <Proposal onAccept={handleProposalAccept} name="Maria" />;
+        return <Proposal onAccept={handleProposalAccept} name="Gabriela Carolina Mendoza Crespo" />;
       case 'accepted':
         return <Celebration />;
       default:
