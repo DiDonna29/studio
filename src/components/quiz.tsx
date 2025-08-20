@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useContext } from 'react';
+import { useState, useContext, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { AppContext } from '@/contexts/app-context';
 import { translations } from '@/lib/i18n';
@@ -11,6 +11,11 @@ interface QuizProps {
   onQuizWin: () => void;
 }
 
+interface Answer {
+  text: string;
+  correct: boolean;
+}
+
 export default function Quiz({ onQuizWin }: QuizProps) {
   const { language } = useContext(AppContext);
   const t = translations[language];
@@ -18,6 +23,15 @@ export default function Quiz({ onQuizWin }: QuizProps) {
 
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [showResult, setShowResult] = useState(false);
+  const [shuffledAnswers, setShuffledAnswers] = useState<Answer[]>([]);
+
+  const currentQuestion = questions[currentQuestionIndex];
+
+  useEffect(() => {
+    // Shuffle answers when the question changes
+    const shuffled = [...currentQuestion.answers].sort(() => Math.random() - 0.5);
+    setShuffledAnswers(shuffled);
+  }, [currentQuestionIndex, currentQuestion.answers]);
 
   const handleAnswerClick = (isCorrect: boolean) => {
     if (isCorrect) {
@@ -35,8 +49,6 @@ export default function Quiz({ onQuizWin }: QuizProps) {
        // You could add a toast or message here for wrong answers
     }
   };
-
-  const currentQuestion = questions[currentQuestionIndex];
 
   return (
     <div className="flex flex-col items-center justify-center p-4 min-h-[50vh]">
@@ -67,7 +79,7 @@ export default function Quiz({ onQuizWin }: QuizProps) {
               <CardContent>
                 <h2 className="text-xl sm:text-2xl font-semibold text-center text-foreground mb-6">{currentQuestion.question}</h2>
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  {currentQuestion.answers.map((answer, index) => (
+                  {shuffledAnswers.map((answer, index) => (
                     <Button
                       key={index}
                       variant="outline"

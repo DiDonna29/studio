@@ -9,7 +9,7 @@ export default function Header() {
   const { theme, toggleTheme, language, toggleLanguage } = useContext(AppContext);
 
   return (
-    <header className="absolute top-4 right-4 flex items-center gap-2">
+    <header className="absolute top-4 right-4 flex items-center gap-2 z-50">
       <Button variant="ghost" size="icon" onClick={toggleLanguage} aria-label="Toggle language">
         <Languages className="h-5 w-5" />
       </Button>
