@@ -25,8 +25,8 @@ export default function Proposal({ name, onAccept }: ProposalProps) {
     }
   };
 
-  const yesButtonSize = noCount * 1.5 + 4; // in rem
-  const yesFontSize = noCount * 0.1 + 1.125; // in rem
+  const yesButtonSize = noCount * 2 + 8; // in rem
+  const yesFontSize = noCount * 0.15 + 1.25; // in rem
   const noButtonOpacity = 1 - noCount * 0.15;
 
 
@@ -37,9 +37,24 @@ export default function Proposal({ name, onAccept }: ProposalProps) {
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.5, duration: 0.5 }}
     >
-      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground">
-        {t.proposalQuestion(name)}
-      </h1>
+      <motion.h2 
+        className="font-headline text-5xl sm:text-6xl md:text-7xl font-bold text-primary"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.8, duration: 0.5 }}
+      >
+        {name}
+      </motion.h2>
+      
+      <motion.h1 
+        className="mt-6 font-headline text-3xl sm:text-4xl md:text-5xl font-bold text-foreground"
+        initial={{ y: -20, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 1, duration: 0.5 }}
+      >
+        {t.proposalQuestionPlain}
+      </motion.h1>
+
       <p className="mt-4 text-lg text-foreground/80">{t.proposalSubtitle}</p>
 
       <div className="mt-12 flex flex-col sm:flex-row items-center justify-center gap-4">
@@ -52,7 +67,7 @@ export default function Proposal({ name, onAccept }: ProposalProps) {
           transition={{ type: 'spring', stiffness: 200, damping: 20 }}
         >
           <Button
-            className="w-full h-full text-lg font-bold bg-primary text-primary-foreground hover:bg-primary/90 shadow-lg transform transition-transform hover:scale-105"
+            className="w-full h-full text-lg font-bold bg-green-500 text-white hover:bg-green-600 shadow-lg transform transition-transform hover:scale-105"
             onClick={onAccept}
           >
             {t.yesButton}
@@ -70,7 +85,7 @@ export default function Proposal({ name, onAccept }: ProposalProps) {
               exit={{ opacity: 0, scale: 0 }}
             >
             <Button
-              className="font-bold bg-destructive/80 hover:bg-destructive shadow-md"
+              className="font-bold bg-red-500 hover:bg-red-600 text-white shadow-md"
               onClick={handleNoClick}
               >
               {t.noButtonTexts[noCount]}

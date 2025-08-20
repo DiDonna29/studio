@@ -39,6 +39,7 @@ export const translations = {
       ],
     },
     proposalQuestion: (name: string) => `${name}, will you be my girlfriend?`,
+    proposalQuestionPlain: "Will you be my girlfriend?",
     proposalSubtitle: "This is the easiest question you'll ever have to answer.",
     yesButton: "YES! 🩶",
     noButtonTexts: [
@@ -93,6 +94,7 @@ export const translations = {
       ],
     },
     proposalQuestion: (name: string) => `${name}, ¿quieres ser mi novia?`,
+    proposalQuestionPlain: "¿Quieres ser mi novia?",
     proposalSubtitle: "Esta es la pregunta más fácil que tendrás que responder.",
     yesButton: "¡SÍ! 🩶",
     noButtonTexts: [
