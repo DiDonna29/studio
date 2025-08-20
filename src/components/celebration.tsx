@@ -51,13 +51,13 @@ export default function Celebration() {
               <CarouselItem key={index}>
                 <div className="p-1">
                   <Card>
-                    <CardContent className="flex aspect-video items-center justify-center p-0 overflow-hidden rounded-lg">
+                    <CardContent className="flex items-center justify-center p-0 overflow-hidden rounded-lg">
                        <Image
                         src={photo.src}
                         alt={photo.alt}
                         width={600}
                         height={400}
-                        className="w-full h-full object-cover"
+                        className="w-auto h-auto object-contain"
                         data-ai-hint={photo.hint}
                       />
                     </CardContent>
