@@ -1,3 +1,4 @@
+// EDITAR: En este archivo puedes cambiar todos los textos de la aplicación para inglés (en) y español (es).
 export const translations = {
   en: {
     gameTitle: "A Little Game...",
@@ -51,7 +52,7 @@ export const translations = {
       "Okay, fine...",
     ],
     celebrationTitle: "She said YES!",
-    celebrationSubtitle: "A new chapter of our forever begins now. I love you.",
+    celebrationSubtitle: "Now we're official. I like you so much, you enchant me.",
   },
   es: {
     gameTitle: "Un Pequeño Juego...",
@@ -105,6 +106,6 @@ export const translations = {
       "Bueno, está bien...",
     ],
     celebrationTitle: "¡Dijo que SÍ!",
-    celebrationSubtitle: "Un nuevo capítulo de nuestro para siempre comienza ahora. Te amo.",
+    celebrationSubtitle: "Ahora somos novios. Me gustas, me encantas. Un nuevo capítulo comienza.",
   },
 };

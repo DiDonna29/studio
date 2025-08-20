@@ -25,6 +25,7 @@ export default function Home() {
       case 'quiz':
         return <Quiz onQuizWin={handleQuizWin} />;
       case 'proposal':
+        // EDITAR: Cambia el nombre de la persona a la que le propones aquí.
         return <Proposal onAccept={handleProposalAccept} name="Gabriela Carolina Mendoza Crespo" />;
       case 'accepted':
         return <Celebration />;

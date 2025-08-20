@@ -18,6 +18,9 @@ export default function Celebration() {
   const { language } = useContext(AppContext);
   const t = translations[language];
 
+  // EDITAR: Reemplaza estas imágenes con tus propias fotos.
+  // Sube tus imágenes a un servicio de hosting y pega las URLs aquí.
+  // El `hint` ayuda a la IA a encontrar imágenes si se usan placeholders.
   const photos = [
     { src: 'https://placehold.co/600x400.png', alt: 'Couple smiling', hint: 'couple smiling' },
     { src: 'https://placehold.co/600x400.png', alt: 'Holding hands', hint: 'holding hands' },
