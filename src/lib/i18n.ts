@@ -51,8 +51,8 @@ export const translations = {
       "I'll ask again...",
       "Okay, fine...",
     ],
-    celebrationTitle: "I knew you would say yes, I love you",
-    celebrationSubtitle: "Now we're official. I like you so much, you enchant me.",
+    celebrationTitle: "I knew you would say yes 🩶",
+    celebrationSubtitle: "Now we're official.\nI like you so much, you enchant me.",
   },
   es: {
     gameTitle: "Un Pequeño Juego...",
@@ -105,7 +105,7 @@ export const translations = {
       "Preguntaré de nuevo...",
       "Bueno, está bien...",
     ],
-    celebrationTitle: "Sabía que dirías que sí, te quiero",
-    celebrationSubtitle: "Ahora somos novios. Me gustas, me encantas. Un nuevo capítulo comienza.",
+    celebrationTitle: "Sabía que dirías que sí 🩶",
+    celebrationSubtitle: "Ahora somos novios.\nMe gustas, me encantas.",
   },
 };

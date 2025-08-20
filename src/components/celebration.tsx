@@ -41,11 +41,15 @@ export default function Celebration() {
   return (
     <div className="relative text-center p-4 animate-fade-in">
       <Confetti />
-      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-primary animate-pulse">{t.celebrationTitle}</h1>
-      <p className="mt-4 text-lg text-foreground/80">{t.celebrationSubtitle}</p>
+      <h1 className="font-headline text-4xl sm:text-5xl md:text-6xl font-bold text-foreground animate-pulse">{t.celebrationTitle}</h1>
+      <div className="mt-4 text-lg text-foreground/80 space-y-2">
+        {t.celebrationSubtitle.split('\n').map((line, index) => (
+          <p key={index}>{line}</p>
+        ))}
+      </div>
 
       <div className="mt-8 flex justify-center">
-        <Carousel className="w-full max-w-xs sm:max-w-md md:max-w-lg">
+        <Carousel className="w-full max-w-sm sm:max-w-md md:max-w-lg lg:max-w-xl">
           <CarouselContent>
             {photos.map((photo, index) => (
               <CarouselItem key={index}>
@@ -76,7 +80,7 @@ export default function Celebration() {
         <Button asChild>
           <Link href="https://www.youtube.com/watch?v=GBbaZ0IpQp0&ab_channel=RawayanaOfficial" target="_blank" rel="noopener noreferrer">
             <Music className="mr-2 h-4 w-4" />
-            Una canción para nosotros
+            Escúchala, Aunque nunca te lo he dicho...
           </Link>
         </Button>
       </div>
